@@ -22,3 +22,17 @@ function atualizarLista() {
     lista.appendChild(li);
   });
 }
+
+function sortearAmigo() {
+  if (amigos.length > 0) {
+    let sorteado = amigos[Math.floor(Math.random() * amigos.length)];
+    let resultadoLista = document.getElementById("resultado");
+
+    resultadoLista.innerHTML = ""; // Limpa resultado anterior
+    let li = document.createElement("li");
+    li.textContent = `Amigo Secreto: ${sorteado}`;
+    resultadoLista.appendChild(li);
+  } else {
+    alert("Adicione nomes antes de sortear!");
+  }
+}
