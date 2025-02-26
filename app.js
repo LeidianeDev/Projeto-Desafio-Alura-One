@@ -12,4 +12,13 @@ function adicionarAmigo() {
     alert("Nome inválido ou já adicionado!");
   }
 }
+function atualizarLista() {
+  let lista = document.getElementById("listaAmigos");
+  lista.innerHTML = ""; // Limpa a lista antes de recriar
 
+  amigos.forEach((nome) => {
+    let li = document.createElement("li");
+    li.textContent = nome;
+    lista.appendChild(li);
+  });
+}
